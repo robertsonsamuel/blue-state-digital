@@ -46,7 +46,12 @@
   "keywords": [
     "blue-state-digital"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "request": "^2.83.0",
+    "rest-facade": "^1.10.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^8.0.0",
@@ -60,6 +65,7 @@
     "eslint-plugin-flowtype": "^2.29.2",
     "eslint-plugin-flowtype-errors": "^3.0.0",
     "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jest": "^21.4.2",
     "flow-bin": "^0.54.1",
     "jest-cli": "^21.1.0",
     "npm-watch": "^0.2.0",

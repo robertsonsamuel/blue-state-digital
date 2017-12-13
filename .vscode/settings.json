@@ -1,0 +1,6 @@
+{
+    "javascript.validate.enable": false,
+    "prettier.eslintIntegration": true,
+    "prettier.singleQuote": true,
+    "eslint.enable": true
+}

@@ -6,9 +6,11 @@
   ],
   "plugins": [
     "flowtype",
-    "flowtype-errors"
+    "flowtype-errors",
+    "jest"
   ],
   "env": {
+    "jest/globals": true,
     "jest": true
   },
   "rules": {
