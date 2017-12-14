@@ -15,7 +15,7 @@ A node module for accessing the blue state digital api service
 ```js
 import myModule from 'blue-state-digital';
 
-myModule();
+const blueStateDigital = new BSD(options)
 ```
 
 ## API
