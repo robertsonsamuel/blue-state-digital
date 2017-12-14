@@ -103,4 +103,4 @@ class BSD {
   getFormByID = getFormByID
 }
 
-export default BSD
+module.exports = BSD

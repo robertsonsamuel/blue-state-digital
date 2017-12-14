@@ -1,9 +1,5 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _restFacade = require('rest-facade');
 
 var _util = require('util');
@@ -119,4 +115,4 @@ class BSD {
 
 }
 
-exports.default = BSD;
+module.exports = BSD;
