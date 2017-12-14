@@ -1,4 +1,8 @@
 language: node_js
+env:
+  - BSD_DEV=legeslator.bsd.net
+  - BSD_API_ID=MyApp
+  - BSD_API_SECRET=d7ad0ed591ad5d87416deb7b57c6e214d89b1a8b
 node_js:
   - v8.9.1
 script:
