@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#getFormByID() should return all fields for a form 1`] = `
+"<api>
+  <signup_form>
+    <signup_form_id>105</signup_form_id>
+    <cons_group_id>196</cons_group_id>
+    <signup_form_name>Cool Signup Form</signup_form_name>
+    <signup_form_slug>Mobile-Volunteers</signup_form_slug>
+    <form_public_title>Mobile Volunteers</form_public_title>
+    <page_wrapper_id>4</page_wrapper_id>
+    <form_html_top>Help US!</form_html_top>
+    <form_html_bottom></form_html_bottom>
+    <thank_you_html></thank_you_html>
+    <thank_you_redirect>https://secure.actblue.com/donate/</thank_you_redirect>
+    <thank_you_content_page_id>0</thank_you_content_page_id>
+    <thank_you_contribution_page_id>0</thank_you_contribution_page_id>
+    <thank_you_invite_page_id>0</thank_you_invite_page_id>
+    <thank_you_type>2</thank_you_type>
+    <enforce_us_rules>1</enforce_us_rules>
+    <default_country>US</default_country>
+    <submit_button_label></submit_button_label>
+    <show_in_search>1</show_in_search>
+    <van_enabled>0</van_enabled>
+    <email_copy></email_copy>
+    <email_in_subject>0</email_in_subject>
+    <copy_from_name/>
+    <copy_from_email/>
+    <copy_include_general>1</copy_include_general>
+    <auto_resp>0</auto_resp>
+    <auto_resp_from_name></auto_resp_from_name>
+    <auto_resp_subject></auto_resp_subject>
+    <auto_resp_from_email></auto_resp_from_email>
+    <auto_resp_text></auto_resp_text>
+    <auto_resp_use_html>0</auto_resp_use_html>
+    <auto_resp_html></auto_resp_html>
+    <tracking_code_start></tracking_code_start>
+    <tracking_code_end></tracking_code_end>
+    <tracking_enabled>0</tracking_enabled>
+    <default_source></default_source>
+    <default_subsource></default_subsource>
+    <opt_in>0</opt_in>
+    <opt_in_label/>
+    <opt_in_description/>
+    <opt_in_default>0</opt_in_default>
+    <subscribe_users>1</subscribe_users>
+    <email_opt_in_label>Subscribe to our email list</email_opt_in_label>
+    <email_opt_in_default>1</email_opt_in_default>
+    <signup_cap>0</signup_cap>
+    <signup_cap_email></signup_cap_email>
+    <signup_cap_get_action>1</signup_cap_get_action>
+    <signup_cap_get_html></signup_cap_get_html>
+    <signup_cap_get_redirect></signup_cap_get_redirect>
+    <signup_cap_post_action>0</signup_cap_post_action>
+    <signup_cap_post_html></signup_cap_post_html>
+    <signup_cap_post_redirect></signup_cap_post_redirect>
+    <use_captcha>0</use_captcha>
+    <signup_download_storage_key/>
+    <activated_dt/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <create_app/>
+    <create_user/>
+    <create_user_agent>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.101 Safari/537.36</create_user_agent>
+    <create_ip_addr>45.31.181.206</create_ip_addr>
+    <create_admin_user_id>34</create_admin_user_id>
+    <modified_dt>2017-08-23 18:35:57</modified_dt>
+    <modified_app/>
+    <modified_user/>
+    <modified_user_agent/>
+    <modified_ip_addr/>
+    <modified_admin_user_id/>
+    <status>1</status>
+    <note/>
+    <is_active>1</is_active>
+    <base_signup_form_id/>
+    <chapter_id>1</chapter_id>
+    <snapshot_id>0</snapshot_id>
+    <limit_within_secs>-1</limit_within_secs>
+    <limit_on_email>0</limit_on_email>
+    <limit_on_ip>0</limit_on_ip>
+    <limit_on_useragent>0</limit_on_useragent>
+    <limit_on_ballot>0</limit_on_ballot>
+    <inactive_redirect_url></inactive_redirect_url>
+    <enable_addr_autofill>0</enable_addr_autofill>
+  </signup_form>
+</api>"
+`;

@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#listFormFields() should return all fields for a form 1`] = `
+"<?xml version=\\"1.0\\" encoding=\\"UTF-8\\"?>
+<api>
+  <signup_form_field id=\\"1467\\">
+    <format>1</format>
+    <label>Email</label>
+    <description>Email</description>
+    <display_order>1</display_order>
+    <is_shown>1</is_shown>
+    <is_required>1</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1468\\">
+    <format>1</format>
+    <label>Prefix</label>
+    <description>Prefix</description>
+    <display_order>2</display_order>
+    <is_shown>0</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1469\\">
+    <format>1</format>
+    <label>First Name</label>
+    <description>First Name</description>
+    <display_order>3</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1470\\">
+    <format>1</format>
+    <label>Middle Name</label>
+    <description>Middle Name</description>
+    <display_order>4</display_order>
+    <is_shown>0</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1471\\">
+    <format>1</format>
+    <label>Last Name</label>
+    <description>Last Name</description>
+    <display_order>5</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1472\\">
+    <format>1</format>
+    <label>Suffix</label>
+    <description>Suffix</description>
+    <display_order>6</display_order>
+    <is_shown>0</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1473\\">
+    <format>1</format>
+    <label>Address</label>
+    <description>Address</description>
+    <display_order>7</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1474\\">
+    <format>1</format>
+    <label>State/Region/Province</label>
+    <description>State/Region/Province</description>
+    <display_order>8</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1475\\">
+    <format>1</format>
+    <label>City</label>
+    <description>City</description>
+    <display_order>9</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1476\\">
+    <format>1</format>
+    <label>Postal Code</label>
+    <description>Postal Code</description>
+    <display_order>10</display_order>
+    <is_shown>1</is_shown>
+    <is_required>1</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1477\\">
+    <format>3</format>
+    <label>Country</label>
+    <description>Country</description>
+    <display_order>11</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def>
+      <options/>
+    </extra_def>
+  </signup_form_field>
+  <signup_form_field id=\\"1478\\">
+    <format>1</format>
+    <label>Phone</label>
+    <description>Phone</description>
+    <display_order>12</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1479\\">
+    <format>1</format>
+    <label>Mobile</label>
+    <description>Mobile</description>
+    <display_order>13</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1480\\">
+    <format>1</format>
+    <label>Occupation</label>
+    <description>Occupation</description>
+    <display_order>14</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+  <signup_form_field id=\\"1481\\">
+    <format>1</format>
+    <label>Employer</label>
+    <description>Employer</description>
+    <display_order>15</display_order>
+    <is_shown>1</is_shown>
+    <is_required>0</is_required>
+    <is_custom_field>0</is_custom_field>
+    <cons_field_id>0</cons_field_id>
+    <break_after/>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+    <extra_def/>
+  </signup_form_field>
+</api>
+"
+`;

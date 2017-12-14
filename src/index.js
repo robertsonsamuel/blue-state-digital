@@ -4,6 +4,7 @@ import { ArgumentError } from 'rest-facade'
 import util from 'util'
 import { getRequestPromise, generateApiMac } from './utils'
 import searchEvents from './searchEvents'
+import { listForms, listFormFields, getFormByID } from './signupForms'
 
 const BASE_URL_FORMAT = 'https://%s'
 
@@ -97,6 +98,9 @@ class BSD {
   }
 
   searchEvents = searchEvents
+  listForms = listForms
+  listFormFields = listFormFields
+  getFormByID = getFormByID
 }
 
 export default BSD

@@ -26,7 +26,7 @@ import { generateApiMac, getRequestPromise } from './utils'
  * @param {string} params.attendee_cons_id Search events by a consituent's ID who is attending
  * @param {string} params.creator_cons_id Search events by the consituent that created the Event
  * @param {string} params.order_field Search events by order field
- * @returns {Array} returns an array of events
+ * @returns {Promise} BSD JSON Response Promise
  * @memberof BSD
  */
 
@@ -65,8 +65,9 @@ export default function (params: {
     getRequestPromise({
       url: `${this.baseUrl}/page/api/event/search_events?api_ver=${
         this.apiVer
-      }&api_id=${this.apiID}&api_ts=${timeStamp}&api_mac=${apiMac}&${queryParams}`,
+      }&api_id=${this.apiID}&api_ts=${timeStamp}&api_mac=${apiMac}`,
       method: 'GET',
+      query: params,
       json: true,
       headers: {
         'User-agent': `node.js/${process.version.replace('v', '')}`,

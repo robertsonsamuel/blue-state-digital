@@ -40,11 +40,13 @@ describe('#searchAllEvents()', () => {
   it('should return all past and future events', async () => {
     const events = await blueStateDigital.searchEvents()
     expect(events).toBeDefined()
+    expect(events).toMatchSnapshot()
   })
 
   it('should return one event by the event id', async () => {
     const event = await blueStateDigital.searchEvents({ event_id: '457' })
     expect(event).toBeDefined()
     expect(event).toHaveLength(1)
+    expect(event).toMatchSnapshot()
   })
 })

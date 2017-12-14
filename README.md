@@ -82,7 +82,40 @@ REF: <https://secure.bluestatedigital.com/page/api/doc#-------------Event-API-Ca
     -   `params.creator_cons_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by the consituent that created the Event
     -   `params.order_field` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by order field
 
-Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** returns an array of events
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD JSON Response Promise
+
+#### listForms
+
+This method lists all signup forms and relevant data about those forms.
+<https://secure.bluestatedigital.com/page/api/doc#---------------------list_forms-----------------0.7883351277818669>
+No Params
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response
+
+#### getFormByID
+
+This method gets all properties of the specified signup form.
+<https://secure.bluestatedigital.com/page/api/doc#---------------------get_form----------------->
+
+**Parameters**
+
+-   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Params Object
+    -   `params.signup_form_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** BSD Form ID
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
+
+### listFormFields
+
+Retrieves a list of all form fields associated with a specified signup form.
+
+<https://secure.bluestatedigital.com/page/api/doc#---------------------list_form_fields----------------->
+
+**Parameters**
+
+-   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Params Object
+    -   `params.signup_form_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** BSD Form ID
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
 
 ### utils
 

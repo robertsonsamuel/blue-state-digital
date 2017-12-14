@@ -11,26 +11,26 @@ export const getRequestPromise = (settings: {
   method?: string,
   data?: any,
   headers?: any,
+  query?: any,
   json?: boolean,
-}): any =>
-  new Promise((resolve, reject) => {
-    const requestOptions = {
-      url: settings.url,
-      method: settings.method,
-      body: settings.data,
-      json: settings.json,
-      headers: settings.headers,
+}): Promise => new Promise((resolve, reject) => {
+  const requestOptions = {
+    url: settings.url,
+    qs: settings.query,
+    method: settings.method,
+    body: settings.data,
+    json: settings.json,
+    headers: settings.headers,
+  }
+  request(requestOptions, (err, res, body) => {
+    if (err) {
+      reject(err)
+      return
     }
 
-    request(requestOptions, (err, res, body) => {
-      if (err) {
-        reject(err)
-        return
-      }
-
-      resolve(body)
-    })
+    resolve(body)
   })
+})
 
 export const generateApiMac = (settings: {
   path: string,

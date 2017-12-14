@@ -1,0 +1,14 @@
+<api>
+  <signup_form id="105" modified_dt="1503513357">
+    <signup_form_name>Cool Signup Form</signup_form_name>
+    <signup_form_slug>Mobile-Volunteers</signup_form_slug>
+    <form_public_title>Mobile Volunteers</form_public_title>
+    <create_dt>2017-08-23 18:35:57</create_dt>
+  </signup_form>
+  <signup_form id="122" modified_dt="1509719855">
+    <signup_form_name>Join</signup_form_name>
+    <signup_form_slug>Join</signup_form_slug>
+    <form_public_title>Join campaign for U.S. Senate</form_public_title>
+    <create_dt>2017-11-03 14:32:59</create_dt>
+  </signup_form>
+</api>
