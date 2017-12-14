@@ -1,8 +1,24 @@
+import nock from 'nock'
 import BSD from '../src'
 
 require('dotenv').config()
 
 // Test of BSD class instance and construction
+
+beforeAll(() => {
+  nock(`https://${process.env.BSD_DEV}`)
+    .get('/page/api')
+    .query(true)
+    .reply(404, 'Missing required parameters to determine class and method name')
+  nock(`https://${process.env.BSD_DEV}`)
+    .get('/page/api')
+    .query(true)
+    .reply(403, 'API user not recognized')
+})
+
+afterAll(() => {
+  nock.cleanAll()
+})
 
 describe('BSD', () => {
   describe('when all constructor params are correct and present', () => {
@@ -16,7 +32,7 @@ describe('BSD', () => {
       expect(blueStateDigital).toBeInstanceOf(BSD)
     })
 
-    it('should authenticate with BSD', (done) => {
+    it('should authenticate with BSD', async () => {
       const blueStateDigital = new BSD({
         baseUrl: process.env.BSD_DEV,
         apiID: process.env.BSD_API_ID,
@@ -25,10 +41,8 @@ describe('BSD', () => {
       })
       // We expect this 404 missing error this means BSD has authenticated correctly
       // There is no entry point for BSD
-      blueStateDigital.authenticate().then((body) => {
-        expect(body).toEqual('Missing required parameters to determine class and method name')
-        done()
-      })
+      const response = await blueStateDigital.authenticate()
+      expect(response).toEqual('Missing required parameters to determine class and method name')
     })
   })
 
@@ -51,6 +65,17 @@ describe('BSD', () => {
         })
       }).toThrowError('Must provide a base url.')
       expect(blueStateDigital).toBeUndefined()
+    })
+
+    it('should fail authenticate with BSD', async () => {
+      const blueStateDigital = new BSD({
+        baseUrl: process.env.BSD_DEV,
+        apiID: 'badAppID',
+        apiSecret: process.env.BSD_API_SECRET,
+        apiVer: 2,
+      })
+      const response = await blueStateDigital.authenticate()
+      expect(response).toEqual('API user not recognized')
     })
   })
 })

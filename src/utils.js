@@ -11,13 +11,14 @@ export const getRequestPromise = (settings: {
   method?: string,
   data?: any,
   headers?: any,
+  json?: boolean,
 }): any =>
   new Promise((resolve, reject) => {
     const requestOptions = {
       url: settings.url,
       method: settings.method,
       body: settings.data,
-      json: typeof settings.data === 'object',
+      json: settings.json,
       headers: settings.headers,
     }
 
@@ -33,6 +34,7 @@ export const getRequestPromise = (settings: {
 
 export const generateApiMac = (settings: {
   path: string,
+  params: string,
   apiID: string,
   apiVer: number,
   apiSecret: string,
@@ -41,7 +43,10 @@ export const generateApiMac = (settings: {
 }): string => {
   const signingString: string = `${settings.apiID}\n${settings.apiTs}\n${settings.path}\napi_ver=${
     settings.apiVer
-  }&api_id=${settings.apiID}&api_ts=${settings.apiTs}`
+  }&api_id=${settings.apiID}&api_ts=${settings.apiTs}${
+    settings.params ? `&${settings.params}` : ''
+  }`
+
   return crypto
     .createHmac('sha1', settings.apiSecret)
     .update(signingString)

@@ -3,8 +3,9 @@
 import { ArgumentError } from 'rest-facade'
 import util from 'util'
 import { getRequestPromise, generateApiMac } from './utils'
+import searchEvents from './searchEvents'
 
-const BASE_URL_FORMAT = 'https://%s/page/api/'
+const BASE_URL_FORMAT = 'https://%s'
 
 /**
  * Create a new BSD rest client.
@@ -37,7 +38,7 @@ class BSD {
   baseUrl: string
   apiID: string
   apiSecret: string
-  apiVer: number
+  apiVer: number = 2
 
   constructor(options: any) {
     if (!options) {
@@ -66,25 +67,36 @@ class BSD {
     this.apiVer = options.apiVer
   }
 
-  authenticate() {
+  /**
+   *
+   *
+   * @returns {string} Returns authentication response
+   * @memberof BSD
+   */
+  async authenticate() {
     const timeStamp = Date.now()
     const apiMac = generateApiMac({
-      path: '/page/api/',
+      path: '/page/api',
       apiID: this.apiID,
       apiVer: this.apiVer,
       apiSecret: this.apiSecret,
       apiTs: timeStamp,
     })
 
-    return getRequestPromise({
-      url: `${this.baseUrl}?api_ver=${this.apiVer}&api_id=${this.apiID}&api_ts=${timeStamp}&api_mac=${apiMac}`,
+    const authResponse = await getRequestPromise({
+      url: `${this.baseUrl}/page/api?api_ver=${this.apiVer}&api_id=${
+        this.apiID
+      }&api_ts=${timeStamp}&api_mac=${apiMac}`,
       method: 'GET',
       headers: {
         'User-agent': `node.js/${process.version.replace('v', '')}`,
         'Content-Type': 'application/json',
       },
     })
+    return authResponse
   }
+
+  searchEvents = searchEvents
 }
 
 export default BSD

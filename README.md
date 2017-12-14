@@ -13,9 +13,9 @@ A node module for accessing the blue state digital api service
 ## Usage
 
 ```js
-import myModule from 'blue-state-digital'
+import myModule from 'blue-state-digital';
 
-myModule()
+myModule();
 ```
 
 ## API
@@ -49,6 +49,40 @@ const blueStateDigital = new BSD({
   apiVer: 2,
 })
 ```
+
+#### authenticate
+
+Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Returns authentication response
+
+#### searchEvents
+
+Searches all the events and returns the future events unless specified by date_start.
+
+REF: <https://secure.bluestatedigital.com/page/api/doc#-------------Event-API-Calls--------->
+
+**Parameters**
+
+-   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The BSD API Options.
+    -   `params.event_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by Event ID
+    -   `params.event_type` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by Event Type
+    -   `params.host_name` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the Host of the Event
+    -   `params.day` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the day of the Event
+    -   `params.date_start` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the start date of the Event
+    -   `params.date_end` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the end date of the Event
+    -   `params.create_day` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the created day of the Event
+    -   `params.create_date_start` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the created start date of the Event
+    -   `params.create_date_end` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by the created end date of the Event
+    -   `params.country` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by events country
+    -   `params.zip` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by events zipcode
+    -   `params.city` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search by events by city
+    -   `params.state` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by state
+    -   `params.zip_radius` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events in a given zipcode radius
+    -   `params.radius_unit` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events in a given radius
+    -   `params.attendee_cons_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by a consituent's ID who is attending
+    -   `params.creator_cons_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by the consituent that created the Event
+    -   `params.order_field` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Search events by order field
+
+Returns **[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** returns an array of events
 
 ### utils
 
