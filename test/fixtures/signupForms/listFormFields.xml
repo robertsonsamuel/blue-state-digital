@@ -1,8 +1,5 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`#listFormFields() should return all fields for a form 1`] = `
-"<api>
-  <signup_form_field id=\\\\\\\\\\"1467\\\\\\\\\\">
+<api>
+  <signup_form_field id=\\"1467\\">
     <format>1</format>
     <label>Email</label>
     <description>Email</description>
@@ -15,7 +12,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1468\\\\\\\\\\">
+  <signup_form_field id=\\"1468\\">
     <format>1</format>
     <label>Prefix</label>
     <description>Prefix</description>
@@ -28,7 +25,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1469\\\\\\\\\\">
+  <signup_form_field id=\\"1469\\">
     <format>1</format>
     <label>First Name</label>
     <description>First Name</description>
@@ -41,7 +38,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1470\\\\\\\\\\">
+  <signup_form_field id=\\"1470\\">
     <format>1</format>
     <label>Middle Name</label>
     <description>Middle Name</description>
@@ -54,7 +51,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1471\\\\\\\\\\">
+  <signup_form_field id=\\"1471\\">
     <format>1</format>
     <label>Last Name</label>
     <description>Last Name</description>
@@ -67,7 +64,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1472\\\\\\\\\\">
+  <signup_form_field id=\\"1472\\">
     <format>1</format>
     <label>Suffix</label>
     <description>Suffix</description>
@@ -80,7 +77,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1473\\\\\\\\\\">
+  <signup_form_field id=\\"1473\\">
     <format>1</format>
     <label>Address</label>
     <description>Address</description>
@@ -93,7 +90,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1474\\\\\\\\\\">
+  <signup_form_field id=\\"1474\\">
     <format>1</format>
     <label>State/Region/Province</label>
     <description>State/Region/Province</description>
@@ -106,7 +103,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1475\\\\\\\\\\">
+  <signup_form_field id=\\"1475\\">
     <format>1</format>
     <label>City</label>
     <description>City</description>
@@ -119,7 +116,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1476\\\\\\\\\\">
+  <signup_form_field id=\\"1476\\">
     <format>1</format>
     <label>Postal Code</label>
     <description>Postal Code</description>
@@ -132,7 +129,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1477\\\\\\\\\\">
+  <signup_form_field id=\\"1477\\">
     <format>3</format>
     <label>Country</label>
     <description>Country</description>
@@ -147,7 +144,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
       <options/>
     </extra_def>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1478\\\\\\\\\\">
+  <signup_form_field id=\\"1478\\">
     <format>1</format>
     <label>Phone</label>
     <description>Phone</description>
@@ -160,7 +157,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1479\\\\\\\\\\">
+  <signup_form_field id=\\"1479\\">
     <format>1</format>
     <label>Mobile</label>
     <description>Mobile</description>
@@ -173,7 +170,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1480\\\\\\\\\\">
+  <signup_form_field id=\\"1480\\">
     <format>1</format>
     <label>Occupation</label>
     <description>Occupation</description>
@@ -186,7 +183,7 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-  <signup_form_field id=\\\\\\\\\\"1481\\\\\\\\\\">
+  <signup_form_field id=\\"1481\\">
     <format>1</format>
     <label>Employer</label>
     <description>Employer</description>
@@ -199,5 +196,4 @@ exports[`#listFormFields() should return all fields for a form 1`] = `
     <create_dt>2017-08-23 18:35:57</create_dt>
     <extra_def/>
   </signup_form_field>
-</api>"
-`;
+</api>
