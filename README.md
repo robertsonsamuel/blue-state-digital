@@ -58,7 +58,7 @@ Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 This is the main method to handle easy authentication with bsd and node js.
 API Base Documentation
-<https://secure.bluestatedigital.com/page/api/>
+<https://secure.bluestatedigital.com/page/api/doc>
 
 **Parameters**
 
