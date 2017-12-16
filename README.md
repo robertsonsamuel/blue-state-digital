@@ -13,7 +13,7 @@ A node module for accessing the blue state digital api service
 ## Usage
 
 ```js
-import myModule from 'blue-state-digital';
+import BSD from 'blue-state-digital';
 
 const blueStateDigital = new BSD(options)
 ```
@@ -54,6 +54,56 @@ const blueStateDigital = new BSD({
 
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Returns authentication response
 
+#### request
+
+This is the main method to handle easy authentication with bsd and node js.
+API Base Documentation
+<https://secure.bluestatedigital.com/page/api/>
+
+**Parameters**
+
+-   `options` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Options Object
+    -   `options.method` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** |'GET'|'POST'|'PUT'|'DELETE'|
+    -   `options.path` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** BSD API Path /page/api/ or /page/api/events/search_events
+    -   `options.body` **any** Post Body. {string} XML or {string} JSON
+    -   `options.query` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Query Params
+
+**Examples**
+
+```javascript
+async function doRequest() {
+  try {
+    const response = await blueStateDigital.request({
+      method: '|GET|POST|PUT|DELETE|',
+      path: 'path for the call, see BSD documentation for possible calls',
+      body: //body parameters as JSON or an XML string
+      query: {
+       // query string parameters, {event_id:2, ids:'1,3,5' } is valid for example
+      },
+    })
+  } catch(err) {
+    // handle error
+  }
+}
+
+
+const response = blueStateDigital.request({
+  method: '|GET|POST|PUT|DELETE|',
+  path: 'path for the call, see BSD documentation for possible calls',
+  body: // //body parameters as JSON or an XML string
+  query: {
+   // query string parameters, {event_id: 2 ids:'1,3,5' } is valid for example
+  },
+}).then(resp => {
+  // bsd response
+})
+.catch(err => {
+  // be sure to handle errors
+})
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD Response Promise
+
 #### searchEvents
 
 Searches all the events and returns the future events unless specified by date_start.
@@ -90,6 +140,12 @@ This method lists all signup forms and relevant data about those forms.
 <https://secure.bluestatedigital.com/page/api/doc#---------------------list_forms-----------------0.7883351277818669>
 No Params
 
+**Examples**
+
+```javascript
+const forms = await blueStateDigital.listForms()
+```
+
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response
 
 #### getFormByID
@@ -101,6 +157,12 @@ This method gets all properties of the specified signup form.
 
 -   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Params Object
     -   `params.signup_form_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** BSD Form ID
+
+**Examples**
+
+```javascript
+const form = await blueStateDigital.getFormByID({ signup_form_id: '105' })
+```
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
 
@@ -115,9 +177,13 @@ Retrieves a list of all form fields associated with a specified signup form.
 -   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** Params Object
     -   `params.signup_form_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** BSD Form ID
 
-Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
+**Examples**
 
-### utils
+```javascript
+const formFields = await blueStateDigital.listFormFields({ signup_form_id: '105' })
+```
+
+Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
 
 ## License
 

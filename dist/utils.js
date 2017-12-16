@@ -19,10 +19,6 @@ var _crypto2 = _interopRequireDefault(_crypto);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * @module utils
- */
-
 const getRequestPromise = exports.getRequestPromise = settings => new _bluebird2.default((resolve, reject) => {
   const requestOptions = {
     url: settings.url,

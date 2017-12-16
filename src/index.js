@@ -5,6 +5,7 @@ import util from 'util'
 import { getRequestPromise, generateApiMac } from './utils'
 import searchEvents from './searchEvents'
 import { listForms, listFormFields, getFormByID } from './signupForms'
+import request from './request'
 
 const BASE_URL_FORMAT = 'https://%s'
 
@@ -97,6 +98,7 @@ class BSD {
     return authResponse
   }
 
+  request = request
   searchEvents = searchEvents
   listForms = listForms
   listFormFields = listFormFields

@@ -24,6 +24,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * https://secure.bluestatedigital.com/page/api/doc#---------------------list_forms-----------------0.7883351277818669
  * No Params
  *
+ * @example
+ * const forms = await blueStateDigital.listForms()
+ *
  * @returns {Promise} BSD XML Response
  * @memberof BSD
  */
@@ -57,6 +60,9 @@ function listForms() {
 /**
  * This method gets all properties of the specified signup form.
  * https://secure.bluestatedigital.com/page/api/doc#---------------------get_form-----------------
+ *
+ * @example
+ * const form = await blueStateDigital.getFormByID({ signup_form_id: '105' })
  *
  * @param {object} params Params Object
  * @param {string} params.signup_form_id BSD Form ID
@@ -98,6 +104,9 @@ function getFormByID(params) {
  * Retrieves a list of all form fields associated with a specified signup form.
  *
  * https://secure.bluestatedigital.com/page/api/doc#---------------------list_form_fields-----------------
+ *
+ * @example
+ * const formFields = await blueStateDigital.listFormFields({ signup_form_id: '105' })
  *
  * @param {object} params Params Object
  * @param {string} params.signup_form_id BSD Form ID

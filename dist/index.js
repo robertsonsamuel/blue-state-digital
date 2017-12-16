@@ -14,6 +14,10 @@ var _searchEvents2 = _interopRequireDefault(_searchEvents);
 
 var _signupForms = require('./signupForms');
 
+var _request = require('./request');
+
+var _request2 = _interopRequireDefault(_request);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
@@ -51,6 +55,7 @@ class BSD {
 
   constructor(options) {
     this.apiVer = 2;
+    this.request = _request2.default;
     this.searchEvents = _searchEvents2.default;
     this.listForms = _signupForms.listForms;
     this.listFormFields = _signupForms.listFormFields;
