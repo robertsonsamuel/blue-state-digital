@@ -31,7 +31,7 @@ const blueStateDigital = new BSD(options)
     -   [sendTriggeredEmail](#sendtriggeredemail)
     -   [listForms](#listforms)
     -   [getFormByID](#getformbyid)
--   [listFormFields](#listformfields)
+    -   [listFormFields](#listformfields)
 
 ### BSD
 
@@ -150,15 +150,15 @@ Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refe
 
 Searches all the events and returns the future events unless specified by date_start.
 
-REF: <https://secure.bluestatedigital.com/page/api/doc#-----------------send_triggered_email------------->
+REF: <https://secure.bluestatedigital.com/page/api/doc> (send_triggered_email)
 
 **Parameters**
 
 -   `params` **[object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)** The BSD API Options.
-    -   `params.mailing_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Obfuscated mailing ID to be sent (found on the manage mailings page)
+    -   `params.mailing_id` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Obfuscated mailing ID to be sent (found in the BSD cp)
     -   `params.email` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Recipient email address
     -   `params.email_opt_in` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Whether to subscribe newly-created constituents
-    -   `params.trigger_values` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** URL-encoded json containing data to be made available to the email
+    -   `params.trigger_values` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** Additional data to be made available to the email
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD JSON Response Promise
 
@@ -194,7 +194,7 @@ const form = await blueStateDigital.getFormByID({ signup_form_id: '105' })
 
 Returns **[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)** BSD XML Response Promise
 
-### listFormFields
+#### listFormFields
 
 Retrieves a list of all form fields associated with a specified signup form.
 
