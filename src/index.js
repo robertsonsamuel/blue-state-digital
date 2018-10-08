@@ -5,6 +5,7 @@ import util from 'util'
 import { getRequestPromise, generateApiMac } from './utils'
 import searchEvents from './searchEvents'
 import { listForms, listFormFields, getFormByID } from './signupForms'
+import sendTriggeredEmail from './sendTriggeredEmail'
 import request from './request'
 
 const BASE_URL_FORMAT = 'https://%s'
@@ -103,6 +104,7 @@ class BSD {
   listForms = listForms
   listFormFields = listFormFields
   getFormByID = getFormByID
+  sendTriggeredEmail = sendTriggeredEmail
 }
 
 module.exports = BSD
