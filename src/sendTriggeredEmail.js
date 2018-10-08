@@ -6,12 +6,12 @@ import { generateApiMac, getRequestPromise } from './utils'
 /**
  * Searches all the events and returns the future events unless specified by date_start.
  *
- * REF: https://secure.bluestatedigital.com/page/api/doc#-----------------send_triggered_email-------------
+ * REF: https://secure.bluestatedigital.com/page/api/doc (send_triggered_email)
  * @param {object} params The BSD API Options.
- * @param {string} params.mailing_id Obfuscated mailing ID to be sent (found on the manage mailings page)
+ * @param {string} params.mailing_id Obfuscated mailing ID to be sent (found in the BSD cp)
  * @param {string} params.email Recipient email address
  * @param {string} params.email_opt_in Whether to subscribe newly-created constituents
- * @param {string} params.trigger_values URL-encoded json containing data to be made available to the email
+ * @param {string} params.trigger_values Additional data to be made available to the email
  * @returns {Promise} BSD JSON Response Promise
  * @memberof BSD
  */
