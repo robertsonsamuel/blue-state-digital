@@ -14,6 +14,10 @@ var _searchEvents2 = _interopRequireDefault(_searchEvents);
 
 var _signupForms = require('./signupForms');
 
+var _sendTriggeredEmail = require('./sendTriggeredEmail');
+
+var _sendTriggeredEmail2 = _interopRequireDefault(_sendTriggeredEmail);
+
 var _request = require('./request');
 
 var _request2 = _interopRequireDefault(_request);
@@ -60,6 +64,7 @@ class BSD {
     this.listForms = _signupForms.listForms;
     this.listFormFields = _signupForms.listFormFields;
     this.getFormByID = _signupForms.getFormByID;
+    this.sendTriggeredEmail = _sendTriggeredEmail2.default;
 
     if (!options) {
       throw new _restFacade.ArgumentError('Must provide a BSD configuration object.');

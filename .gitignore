@@ -4,3 +4,4 @@ coverage
 *.log
 .env
 package-lock.json
+.idea

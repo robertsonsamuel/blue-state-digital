@@ -71,8 +71,10 @@ describe('#request()', () => {
       },
     })
     const repsonseBody = await response
-    const query = queryString.parse(repsonseBody)
     expect(repsonseBody).toBeDefined()
+
+    const qs = repsonseBody.substr(repsonseBody.indexOf('?') + 1)
+    const query = queryString.parse(qs)
     expect(query.api_ver).toBeDefined()
     expect(query.ids).toEqual('1,3,5')
     expect(query.api_id).toBeDefined()

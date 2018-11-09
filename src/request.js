@@ -1,6 +1,7 @@
 // @flow
 import request from 'request'
 import Promise from 'bluebird'
+import querystring from 'querystring'
 import { generateApiMac } from './utils'
 
 /**
@@ -56,6 +57,9 @@ export default function (options: { method: string, path: string, body: any, que
     const method = options.method || 'GET'
     const { body, query } = options
 
+    // api mac must be generated without url encoded parameters
+    const qs = querystring.stringify(query, '&', '=', { encodeURIComponent: str => str })
+
     const timeStamp = Date.now()
     const apiMac = generateApiMac({
       path: options.path,
@@ -63,18 +67,19 @@ export default function (options: { method: string, path: string, body: any, que
       apiVer: this.apiVer,
       apiSecret: this.apiSecret,
       apiTs: timeStamp,
+      params: qs,
     })
 
     const requestOptions = {
       method,
       url: this.baseUrl + options.path,
       body,
-      qs: Object.assign(query || {}, {
+      qs: Object.assign({
         api_ver: this.apiVer,
         api_id: this.apiID,
         api_ts: timeStamp,
         api_mac: apiMac,
-      }),
+      }, query || {}),
       headers: {
         'User-agent': `node.js/${process.version.replace('v', '')}`,
       },

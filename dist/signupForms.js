@@ -111,6 +111,7 @@ function getFormByID(params) {
  * @param {object} params Params Object
  * @param {string} params.signup_form_id BSD Form ID
  * @returns {Promise} BSD XML Response Promise
+ * @memberof BSD
  */
 
 function listFormFields(params) {

@@ -103,6 +103,7 @@ export function getFormByID(params: { signup_form_id: string }) {
  * @param {object} params Params Object
  * @param {string} params.signup_form_id BSD Form ID
  * @returns {Promise} BSD XML Response Promise
+ * @memberof BSD
  */
 
 export function listFormFields(params: { signup_form_id: string }) {

@@ -14,6 +14,9 @@ exports.default = function (options) {
     const body = options.body,
           query = options.query;
 
+    // api mac must be generated without url encoded parameters
+
+    const qs = _querystring2.default.stringify(query, '&', '=', { encodeURIComponent: str => str });
 
     const timeStamp = Date.now();
     const apiMac = (0, _utils.generateApiMac)({
@@ -21,19 +24,20 @@ exports.default = function (options) {
       apiID: this.apiID,
       apiVer: this.apiVer,
       apiSecret: this.apiSecret,
-      apiTs: timeStamp
+      apiTs: timeStamp,
+      params: qs
     });
 
     const requestOptions = {
       method,
       url: this.baseUrl + options.path,
       body,
-      qs: Object.assign(query || {}, {
+      qs: Object.assign({
         api_ver: this.apiVer,
         api_id: this.apiID,
         api_ts: timeStamp,
         api_mac: apiMac
-      }),
+      }, query || {}),
       headers: {
         'User-agent': `node.js/${process.version.replace('v', '')}`
       }
@@ -57,6 +61,10 @@ var _request2 = _interopRequireDefault(_request);
 var _bluebird = require('bluebird');
 
 var _bluebird2 = _interopRequireDefault(_bluebird);
+
+var _querystring = require('querystring');
+
+var _querystring2 = _interopRequireDefault(_querystring);
 
 var _utils = require('./utils');
 
